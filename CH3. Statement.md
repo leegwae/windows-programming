@@ -1,5 +1,20 @@
 # CH3. 문장
 
+- C# 언어의 문장
+  - 배정문: `var=exp`
+  - 혼합문: `{}`
+  - 제어문
+    - 조건문: `if`문, `switch`문
+    - 반복문: `for`문. `while`문, `do-while`문, `foreach`문
+    - 분기문: `break`문, `continue`문, `goto`문, `return`문, `throw`문
+  - 오버플로 검사문: `checked`문, `unchecked`문
+  - 표준 입출력문: `Console.Read()`, `Console.ReadLine()`, `Console.Write()`, `Console.WriteLine()`
+  - 리소스문: `using`문 (4.3 참고)
+  - 동기화문: `lock`문 (6.3 참고)
+  - 예외 처리문: `try-catch-finally`문 (6.4 참고)
+
+
+
 ## 3.1 배정문
 
 - **배정문(assignment statement)**: 값을 변수에 저장하는데 사용한다.
