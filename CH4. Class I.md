@@ -6,7 +6,7 @@
   - 객체를 정의하는 템플릿(template): **객체**의 구조(structure)와 행위(behavior)를 정의하는 방법이다.
   - OOP의 특성이다: 프로그램의 유연성(flexibility), 이식성(protability), 재사용성(reusability)를 높인다.
   - 자료 추상화(data abstraction)의 방법이다.
-- C# 프로그래밍의 기본 단위는 클래스이다.
+  - C# 프로그래밍의 기본 단위는 클래스이다.
 
 
 
@@ -44,8 +44,8 @@
 | `public`    | 다른 프로그램에서도 사용할 수 있다.                          |
 | `internal`  | 같은 assembly에서만 사용할 수 있다. 디폴트.                  |
 | `static`    | 정적 클래스(static class). 모든 멤버가 정적 멤버가 된다. 정적 멤버는 객체 단위가 아니라 클래스 단위로 존재한다(클래스 선언만으로도 멤버가 존재한다). |
-| `abstract`  | 5장                                                          |
-| `sealed`    | 5장                                                          |
+| `abstract`  | 5.1.2.4 참고                                                 |
+| `sealed`    | 5.1.2.3 참고                                                 |
 | `protected` |                                                              |
 | `private`   |                                                              |
 | `new`       | 중첩 클래스에서 사용되며, 베이스 클래스의 멤버를 숨긴다.     |
@@ -123,11 +123,11 @@
 
 | 접근 수정자                                    | 같은 클래스 | 파생 클래스 | 네임 스페이스 | 모든 클래스 |
 | ---------------------------------------------- | ----------- | ----------- | ------------- | ----------- |
-| `private`                                      |             | X           | X             | X           |
-| `protected`                                    |             |             | X             | X           |
-| `internal`                                     |             | X           |               | X           |
-| `protected internal`<br />`internal protected` |             |             |               | X           |
-| `public`                                       |             |             |               |             |
+| `private`                                      | O           | X           | X             | X           |
+| `protected`                                    | O           |             | X             | X           |
+| `internal`                                     | O           | X           | O             | X           |
+| `protected internal`<br />`internal protected` | O           | O           | O             | X           |
+| `public`                                       | O           | O           | O             | O           |
 
 
 
@@ -683,7 +683,7 @@ name: Cony age: 3
 
 
 
-### 4.3.6 메서드 오버로딩
+### 4.3.6 시그네처와 메서드 오버로딩
 
 - **시그네처(signature)**: 메서드를 구별하는데 사용하는 정보
   - (1) 메서드의 이름
