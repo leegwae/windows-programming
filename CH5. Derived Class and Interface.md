@@ -1,4 +1,4 @@
-# CH5. Derived Class and Interface
+# CH5. 파생 클래스와 인터페이스
 
 - 파생 클래스: 이미 존재하는 클래스에 정보를 추가하여 만든 새로운 클래스
 - C#은 단일 상속만을 지원한다: 다중 상속이 필요한 경우 인터페이스를 사용한다.
@@ -16,7 +16,7 @@
 
 ## 5.1.1 파생 클래스의 정의
 
-```
+```c#
 [class-modifiers] class 파생클래스이름 : 베이스클래스이름 {
 	\\ 멤버 선언
 }
@@ -43,7 +43,7 @@
 
 - `base.필드`: 파생 클래스 내부에서 베이스 클래스의 필드에 접근할 수 있다.
 
-```c@
+```c#
 using System;
 
 namespace HiddenNameApp
@@ -145,7 +145,7 @@ class DerivedClass : BaseClass
 
 #### 5.1.2.1 메서드 재정의
 
-```
+```c#
 using System;
 
 namespace OverridingAndOverloadingApp
@@ -199,7 +199,7 @@ Overloading: PrintSomething of DerivedClass with parameter 100
   - `new`: 객체의 타입에 따라(객체 참조 변수의 타입에 따라) 호출된다. 
   - `override`: 객체 참조가 가리키는 객체에 따라 호출된다. 
 
-```
+```c#
 using System;
 
 namespace VirtualMethodApp
