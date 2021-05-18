@@ -515,3 +515,28 @@ BLUE is activated => 1
 BLUE is activated => 2
 ```
 
+
+
+## 6.4.5 ASYNC, AWAIT
+
+```c#
+void Caller()
+{
+    문장 1;
+    MyAsyncMethod();
+    문장 3;
+}
+```
+
+```c#
+async void MyAsyncMethod()
+{
+    문장 2;
+    await Task.Run(async() => {
+        문장 A;
+        문장 B;
+    });			// 별도의 스레드가 되어 실행
+    문장 C;
+}
+```
+
