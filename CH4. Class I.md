@@ -1095,6 +1095,48 @@ This is set-accessor of property without field
 
 
 
+### 자동 구현 프로퍼티에서 메서드의 구현 생략하기
+
+- 다음과 같이 겟셋 메서드의 구현을 생략할 수 있다.
+
+```c#
+public MyProperty { get; set; }
+```
+
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties
+
+```c#
+class Customer
+{
+    // Auto-implemented properties for trivial get and set
+    public double TotalPurchases { get; set; }
+    public string Name { get; set; }
+    public int CustomerId { get; set; }
+
+    // Constructor
+    public Customer(double purchases, string name, int id)
+    {
+        TotalPurchases = purchases;
+        Name = name;
+        CustomerId = id;
+    }
+
+    // Methods
+    public string GetContactInfo() { return "ContactInfo"; }
+    public string GetTransactionHistory() { return "History"; }
+
+    // .. Additional methods, events, etc.
+}
+```
+
+- C# 6 이상에서는 다음과 같이 auto-implemented properties를 필드처럼 초기화할 수 있다.
+
+```c#
+public string FirstName { get; set; } = "Jane";  
+```
+
+
+
 ### 프로퍼티를 메서드로 바꿔보기
 
 - 프로퍼티의 형태
