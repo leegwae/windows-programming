@@ -523,7 +523,7 @@ do {
 } while (char.IsDigit(ch));
 ```
 
-해보기??
+
 
 
 
@@ -546,7 +546,7 @@ Console.WriteLine("Enter an integer: ");
 i = int.Parse(Console.ReadLine());
 ```
 
-해보기??
+
 
 
 
@@ -572,7 +572,7 @@ i = int.Parse(Console.ReadLine());
 Console.WriteLine("3 출력하기: {0,4:d}", 3);		// [][][]3
 ```
 
+- 형식 지정 문자들
 
-
-형식 지정문자표 이미지??
+<img src=".\Images\3-1.PNG" alt="3-1" style="zoom:50%;" />
 

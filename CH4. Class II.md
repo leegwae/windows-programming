@@ -281,8 +281,6 @@ namespace UDTConversionApp
 
 ```
 
-??? 이해하기
-
 
 
 ## 4.9 구조체

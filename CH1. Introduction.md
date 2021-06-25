@@ -33,7 +33,7 @@
 
 ### C# 언어가 다른 언어로부터 받은 영향
 
-이미지??
+<img src=".\Images\1-1.PNG" alt="1-1" style="zoom:50%;" />
 
 - C 언어 계열에 속하는 범용 프로그래밍 언어
 
@@ -410,11 +410,13 @@ class ThreadApp {
 
 - **CTS(Common Type System; 공통 자료형 시스템)**: 다른 언어와 상호 운용성에 필요한 공통의 자료형
 
-이미지??
+<img src=".\Images\1-2.PNG" alt="1-2" style="zoom:50%;" />
 
 
 
 ### 1.4.3 실행 모델
+
+<img src=".\Images\1-3.PNG" alt="1-3" style="zoom:50%;" />
 
 - **실행 모델(excution model)**: 소스 프로그램이 작성되어 타겟 머신(target machine)에서 실행되는 방법을 의미
 - **모듈**: 실행하는데 필요한 내용을 가지고 있는 *.exe 또는 *.dlll 형식의 파일
@@ -422,11 +424,9 @@ class ThreadApp {
 - 어셈블리 과정: IL 파일을 어셈블라 파일로 변환
 - IL 파일: 텍스트 형태로 된 중간 언어 파일, 컴파일된 코드를 확인할 수 있으며 디버깅에 사용할 수 있다.
 
-이미지?>??
+<img src=".\Images\1-4.PNG" alt="1-4" style="zoom:50%;" />
 
 JIT : just in time
-
-책
 
 
 
@@ -436,5 +436,4 @@ JIT : just in time
 - 프로그램의 실행을 도와주는 실행 환경을 포함한다.
   - 필수적인 실행 환경 컴포넌트: 메모리 관리기, 예외 처리기, 스레드 지원
 
-이미지??
-
+<img src=".\Images\1-5.PNG" alt="1-5" style="zoom:60%;" />

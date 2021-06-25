@@ -11,6 +11,10 @@
 
 ### 2.1.1 지정어
 
+- 77개의 지정어가 있음
+
+<img src=".\Images\2-1.PNG" alt="2-1" style="zoom:50%;" />
+
 - **지정어(keyword)**: 프로그래밍 언어 설계 시 그 기능과 용도가 이미 정의되어 있는 단어
 - 식별자로 사용할 수 없다.
 - 문맥 지정어(contextual keyword): 지정어는 아니지만 문맥에 따라 지정어처럼 사용됨.
@@ -64,9 +68,24 @@
 
 (3) 부울형 상수: `false`와 `true` 값만 가지며, 다른 자료형(예: 0, 1)으로 상호 변환되지 않는다.
 
+
+
 (4) 문자 상수: `''`로 감싸 표현한다. 
 
-- escape sequence: 특수한 문자를 표현한다. 이미지??
+- escape sequence: 특수한 문자를 표현한다.
+
+| 이스케이프 시퀀스 | 설명                    |
+| ----------------- | ----------------------- |
+| `\'`              | signle quote(\u0027)    |
+| `\"`              | double quote(\u0022)    |
+| `\0`              | null(\u0000)            |
+| `\b`              | backspace(\u0008)       |
+| `\f`              | form feed(\u000C)       |
+| `\n`              | new line(\u000A)        |
+| `\r`              | carriage return(\u000D) |
+| `\t`              | horizontal tab(\u0009)  |
+
+
 
 (5) 스트링 상수: `""`로 감싸 표현된 스트링이다. `System.String` 클래스의 객체로 취급한다.
 
@@ -98,10 +117,8 @@
 
 ## 2.2 자료형
 
-- 값형: 숫자형, 문자형, 부울형, 열거형, 구조체형
+- 값형: 숫자형(정수형, 실수형), 문자형, 부울형, 열거형, 구조체형
 - 참조형: 클래스형, 인터페이스, 배열형, 델리게이트형
-
-Stack - Heap - Data- Text
 
 ```c#
 using System;
@@ -126,15 +143,7 @@ class MyClass {
 }
 ```
 
-T1: I, Arr, c - Object Cat, Object Array - Glob - (empty)
-
-T2: I, Arr, c, return Addr from A(), J - Object Cat, Object Array - Glob - (empty)
-
-Arr, c는 각각 Heap 영역의 Object Array와 Object Cat을 가리킨다.
-
-이미지??
-
-
+<img src=".\Images\2-2.PNG" alt="2-2" style="zoom:50%;" />
 
 - 포인터가 사라지면 객체 역시 사라져야한다. 가비지 콜렉터가 아무도 가리키지 않는 객체를 회수한다.
 
@@ -155,7 +164,7 @@ Arr, c는 각각 Heap 영역의 Object Array와 Object Cat을 가리킨다.
   - 부호 있는(signed) 정수형: `sbyte`(8비트), `short`(16비트), `int`(32비트), `long`(64비트)
   - 부호 없는(unsigned) 정수형: `byte`(8비트), `ushort`(16비트), `uint`(32비트), `ulong`(64비트)
 
-이미지??
+<img src=".\Images\2-3.PNG" alt="2-3" style="zoom:50%;" />
 
 
 
@@ -178,7 +187,7 @@ Arr, c는 각각 Heap 영역의 Object Array와 Object Cat을 가리킨다.
 
 - 메서드 안에서 선언된 지역 변수는 묵시적인 초기값을 갖지 못한다.
 
-이미지??
+<img src=".\Images\2-4.PNG" alt="2-4" style="zoom:50%;" />
 
 
 
@@ -294,8 +303,8 @@ class StringApp{
         string str = "Class name is ";
         
         Console.WriteLine(str + obj.ToString());
-        sb.append(str);
-        sb.append(obj.ToString());
+        sb.Append(str);
+        sb.Append(obj.ToString());
         Console.WriteLine(sb);
     }
 }
@@ -315,7 +324,7 @@ class StringApp{
   - 식의 의미를 결정
   - C#에는 48개의 연산자 정의됨
 
-이미지??
+<img src=".\Images\2-5.PNG" alt="2-5" style="zoom:50%;" />
 
 
 
@@ -410,7 +419,7 @@ a *= b + 1;			// (2)의 의미를 가진다.
   - `as` 연산자: 데이터 타입을 지정한 타입으로 변환. <u>변환 가능하면 변환된 타입의 포인터를, 그렇지 않다면 `null`을 반환한다.</u>
 
 ``` c#
-static void AsOpertor(object obj) {
+static void AsOperator(object obj) {
     Console.WriteLine(obj + " as string == null: " + (obj as string == null));
 }
 public static void Main(string[] args) {
@@ -420,8 +429,6 @@ public static void Main(string[] args) {
 ```
 
 - 정수형 상수인 10인 `string`으로 변환할 수 없으므로, `10 as string`의 값으로 `null`이 반환된다. 반대로, `"ABC"`는 스트링 상수이므로 `ABC as string`의 값으로 `null`이 반환되지 않는다.
-
-?? 확인하기
 
 
 
@@ -456,7 +463,7 @@ class Program {
 - 결합 법칙: 같은 순위를 갖는 연산자가 여러 개 나타낼 때, 왼쪽에서 오른쪽으로 계산해간다면 좌측 결합(left associativity)이고 오른쪽에서 왼쪽으로 계산해간다면 우측 결합(right associativity)이다.
 - 우측 결합 연산자: 단항 연산자, 전위 증감 연산자, `(자료형)`, 복합 배정 연산자
 
-이미지??
+<img src=".\Images\2-6.PNG" alt="2-6" style="zoom:50%;" />
 
 
 
@@ -486,10 +493,6 @@ approx = (float)big;
 Consoel.WriteLine("difference =" + (big - (int)approx));
 ```
 
-?? 확인하기
-
-
-
 - 정밀도 상실이 일어나는 이유: `int`의 정밀도는 4바이트, `float`의 정밀도는 4바이트이지만 1비트가 `signed`나 지수를 저장하기 때문이다.
 
 
@@ -513,7 +516,7 @@ Consoel.WriteLine("difference =" + (big - (int)approx));
     object o = i;	// 박싱
     ```
 
-이미지 ??
+<img src=".\Images\2-7.PNG" alt="2-7" style="zoom:55%;" />
 
 - **언박싱(unboxing)**: 참조형의 데이터를 값형으로 변환하는 것. 캐스팅을 통하여 명시적으로 행해진다.
   - <u>반드시 박싱될 때의 자료형으로 언박싱을 해주어야한다</u>. 그렇지 않으면 `System.InvalidCaseException` 예외가 발생한다.
